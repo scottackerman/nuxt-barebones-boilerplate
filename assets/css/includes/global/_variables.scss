@@ -1,0 +1,22 @@
+:root {
+  --white: rgb(255 255 255 / 100%); // #FFFFFF
+  --white10: rgb(255 255 255 / 10%); // #FFFFFF1A
+  --black: rgb(0 0 0 / 100%); // #000000
+  --black29: rgb(0 0 0 / 29%); // #00000029
+  --black60: rgb(0 0 0 / 60%); // #00000060
+  --black88: rgb(0 0 0 / 88%); // #00000088
+  --trow-ltblue: rgb(190 229 235 / 19%); // #BEE5EB 19%
+  --veryltblue: rgb(190 229 235 / 100%); // #BEE5EB 100%
+  --ltblue: rgb(3 186 198 / 100%); // #03BAC6
+  --mdblue: rgb(0 111 155 / 100%); // #006F9B
+  --dkblue: rgb(26 27 65 / 100%); // #1A1B41
+  --mauve: rgb(201 123 132 / 100%); // #C97B84
+  --ltmauve: rgb(241 220 222 / 100%); // #F1DCDE
+  --ltmauve60: rgb(241 220 222 / 60%); // #F1DCDE
+  --dkmauve: rgb(177 75 86 / 100%); // #B14B56
+  --brandpurple: #409;
+  --teal: #00BAC6;
+  --bodycopy: var(--dkblue);
+  --site-width: 1440px;
+  --content-width: 1080px;
+}

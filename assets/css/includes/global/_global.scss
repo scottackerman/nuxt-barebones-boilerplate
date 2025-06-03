@@ -1,0 +1,71 @@
+*, * * {
+  box-sizing: border-box;
+}
+
+html {
+	scroll-padding-top: 86px;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+body {
+	color: var(--bodycopy);
+	overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.killscroll {
+	overflow: hidden;
+}
+
+.site-wrapper {
+	max-width: var(--site-width);
+	margin: 0 auto;
+	position: relative;
+	display: block;
+	background-color: #fff;
+}
+
+section {
+  position: relative;
+	max-width: var(--site-width);
+	margin: 0 auto;
+}
+
+.content-container {
+	max-width: var(--content-width);
+	margin: 0 auto;
+  padding: 0 30px;
+}
+
+#skip a {
+  display: block;
+  position: absolute;
+  left: -999px;
+  top: -999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+
+  &:focus {
+    left: auto;
+    top: auto;
+    width: 30%;
+    height: auto;
+    overflow: auto;
+    margin: 10px 35%;
+    color: #000;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 15px;
+    border: 4px solid #000;
+    text-align: center;
+    font-size: 1.2em;
+    z-index: 999;
+  }
+}
+

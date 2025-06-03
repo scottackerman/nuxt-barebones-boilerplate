@@ -1,0 +1,83 @@
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@media screen and (width >= 565px) {
+    .btn-group {
+        flex-direction: row;
+    }
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--mauve) 0% 0% no-repeat padding-box;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    text-align: center;
+    font: normal normal bold 17px/22px "Aktiv Grotesk";
+    letter-spacing: 0;
+    min-width: 240px;
+    max-width: 240px;
+    width: 100%;
+    height: 66px;
+    text-decoration: none;
+    margin: 0;
+
+    &.mauve-btn {
+        background: var(--mauve) 0% 0% no-repeat padding-box;
+        color: var(--white);
+
+        &:hover,
+        &:focus {
+            background: var(--white) 0% 0% no-repeat padding-box;
+            border-color: var(--mauve);
+            color: var(--mauve);
+        }
+    }
+
+    &.blue-btn {
+        background: var(--mdblue) 0% 0% no-repeat padding-box;
+        color: var(--white);
+
+        &:hover,
+        &:focus {
+            background: var(--white) 0% 0% no-repeat padding-box;
+            border-color: var(--mdblue);
+            color: var(--mdblue);
+        }
+    }
+
+    &.blue-ko-btn {
+        background: var(--white) 0% 0% no-repeat padding-box;
+        border: 2px solid var(--mdblue);
+        color: var(--mdblue);
+        text-align: center;
+
+        &:hover,
+        &:focus {
+            background: var(--mdblue) 0% 0% no-repeat padding-box;
+            border-color: transparent;
+            color: var(--white);
+        }
+    }
+
+    &.white-btn {
+        background: var(--white) 0% 0% no-repeat padding-box;
+        border: 2px solid transparent;
+        color: var(--mdblue);
+
+        &:hover,
+        &:focus {
+            background: var(--mdblue) 0% 0% no-repeat padding-box;
+            border-color: var(--white);
+            color: var(--white);
+        }
+    }
+}
+

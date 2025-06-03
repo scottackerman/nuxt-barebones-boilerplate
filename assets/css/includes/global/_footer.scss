@@ -1,0 +1,78 @@
+.logo-link {
+    color: white;
+}
+
+footer {
+    padding: 64px 112px;
+    background-color: var(--brandpurple);
+    color: var(--white);
+
+    .company-logo-ko-picture {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    p,
+    address,
+    a {
+        text-align: left;
+        font: normal normal normal 16px/27px 'Aktiv Grotesk', Arial, sans-serif;
+        letter-spacing: 0;
+        color: #FFF;
+        text-decoration: none;
+    }
+
+    a:focus,
+    a:hover {
+        text-decoration: underline;
+    }
+
+    address,
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 30px;
+    }
+
+    .socials {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+
+    .copyright,
+    .jobcode {
+        padding-top: 30px;
+    }
+}
+
+@media screen and (width < 1080px) {
+    footer {
+        p,
+        address,
+        nav {
+            align-items: center;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (width >= 1080px) {
+    footer {
+        .columns {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+    }
+}
+
