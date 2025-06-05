@@ -1,6 +1,10 @@
 @use 'variables' as *;
 
-@media screen and (min-width: $size-content-wide) {
+.mobile-menu {
+  display: none;
+}
+
+@media screen and (min-width: $size-content-desktop) {
   .site-nav {
     position: relative;
     margin: 0 auto;
@@ -16,13 +20,15 @@
       align-items: left;
       width: 100%;
       background: var(--white) 0% 0% no-repeat padding-box;
-      box-shadow: 0 10px 24px var(--blackalpha);
-      border-radius: 0 0 6px 6px;
-      opacity: 1;
-      margin: 0 auto;
       z-index: 2;
 
-      .core-pages {
+      a {
+        svg {
+          fill: var(--purple)
+        }
+      }
+
+      .desktop-menu {
         display: flex;
         flex-direction: row;
         justify-content: right;
@@ -31,10 +37,14 @@
         gap: 40px;
       }
     }
+
+    .desktop-menu {
+      display: flex;
+    }
   }
 }
 
-@media screen and (max-width: $size-content-wide) {
+@media screen and (max-width: $size-content-mobile) {
   .site-nav {
     max-width: 100%;
     display: flex;
@@ -60,7 +70,7 @@
       top: 0;
     }
 
-    .menu-button {
+    .mobile-menu-button {
       position: absolute;
       top: 15px;
       right: 15px;
@@ -75,7 +85,7 @@
         pointer-events: none;
       }
 
-      .menu-open-button-graphic {
+      .mobile-menu-open-button-graphic {
         width: 50px;
         height: 30px;
         display: flex;
@@ -91,7 +101,7 @@
         }
       }
 
-      .menu-close-button-graphic {
+      .mobile-menu-close-button-graphic {
         display: none;
 
         .line {
@@ -123,7 +133,7 @@
       }
     }
 
-    .core-pages {
+    .desktop-menu {
       display: none;
     }
 
@@ -139,15 +149,15 @@
       overflow: hidden;
       background-color: rgb(255 255 255 / 70%);
 
-      .menu-open-button-graphic {
+      .mobile-menu-open-button-graphic {
         display: none;
       }
 
-      .menu-close-button-graphic {
+      .mobile-menu-close-button-graphic {
         display: block;
       }
 
-      .core-pages {
+      .mobile-menu {
         padding: 130px 15px 15px;
         display: flex;
         flex-direction: column;

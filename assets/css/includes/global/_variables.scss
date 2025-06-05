@@ -1,19 +1,27 @@
+// Insemd.com project in P10 Adobe Fonts
+@import url("https://use.typekit.net/yoo1eqa.css");
+
+$font-heading: 'Kazimir', serif;
+$font-body: 'Sofia Pro', sans-serif;
+
 // $ vars for media queries and preprocessor logic
 $site-width-max: 1600px;
-$size-content-wide: 1080px;
-$size-content-mid: 780px;
-$size-content-small: 565px;
+$size-content-mobile: 565px;
+$size-content-tablet: 780px;
+$size-content-desktop: 1200px;
 
-$spacing--tb-sm-mobile: 12px;
-$spacing--tb-md-mobile: 20px;
-$spacing--tb-lg-mobile: 32px;
+$spacing--tb-xsm-mobile: 12px;
+$spacing--tb-sm-mobile: 20px;
+$spacing--tb-md-mobile: 32px;
+$spacing--tb-lg-mobile: 48px;
 
-$spacing--tb-sm-tablet: 12px;
-$spacing--tb-md-tablet: 20px;
-$spacing--tb-lg-tablet: 32px;
+$spacing--tb-xsm-tablet: 12px;
+$spacing--tb-sm-tablet: 16px;
+$spacing--tb-md-tablet: 32px;
+$spacing--tb-lg-tablet: 48px;
 
-$spacing--tb-xsm-desktop: 32px;
-$spacing--tb-sm-desktop: 62px;
+$spacing--tb-xsm-desktop: 28px;
+$spacing--tb-sm-desktop: 64px;
 $spacing--tb-md-desktop: 100px;
 $spacing--tb-lg-desktop: 140px;
 
@@ -21,41 +29,41 @@ $spacing--lr-sm-mobile: 8px;
 $spacing--lr-md-mobile: 16px;
 $spacing--lr-lg-mobile: 24px;
 
-$spacing--lr-sm-tablet: 8px;
-$spacing--lr-md-tablet: 16px;
-$spacing--lr-lg-tablet: 24px;
+$spacing--lr-sm-tablet: 12px;
+$spacing--lr-md-tablet: 24px;
+$spacing--lr-lg-tablet: 32px;
 
-$spacing--lr-sm-desktop: 20px;
+$spacing--lr-sm-desktop: 32px;
 $spacing--lr-md-desktop: 112px;
 $spacing--lr-lg-desktop: 156px;
 
-$spacing--gap-x-sm-mobile: 8px;
 $spacing--gap-x-md-mobile: 12px;
-$spacing--gap-x-lg-mobile: 20px;
 
-$spacing--gap-x-sm-tablet: 8px;
 $spacing--gap-x-md-tablet: 12px;
-$spacing--gap-x-lg-tablet: 20px;
 
-$spacing--gap-x-sm-desktop: 16px;
 $spacing--gap-x-md-desktop: 24px;
-$spacing--gap-x-lg-desktop: 40px;
 
+$spacing--gap-y-sm-mobile: 4px;
 $spacing--gap-y-sm-mobile: 8px;
 $spacing--gap-y-md-mobile: 16px;
 $spacing--gap-y-lg-mobile: 24px;
 
-$spacing--gap-y-sm-tablet: 8px;
-$spacing--gap-y-md-tablet: 16px;
-$spacing--gap-y-lg-tablet: 24px;
+$spacing--gap-y-xsm-tablet: 8px;
+$spacing--gap-y-sm-tablet: 24px;
+$spacing--gap-y-md-tablet: 32px;
+$spacing--gap-y-lg-tablet: 72px;
 
-$spacing--gap-y-sm-desktop: 16px;
-$spacing--gap-y-md-desktop: 24px;
-$spacing--gap-y-lg-desktop: 40px;
+$spacing--gap-y-xsm-desktop: 8px;
+$spacing--gap-y-sm-desktop: 24px;
+$spacing--gap-y-md-desktop: 32px;
+$spacing--gap-y-lg-desktop: 72px;
 
 $border-radius--sm: 4px;
 $border-radius--med: 8px;
 $border-radius--lg: 16px;
+
+$spacing-tb-button: 16px;
+$spacing-lr-button: 24px;
 
 $colors: (
   "white": #FFFFFF,

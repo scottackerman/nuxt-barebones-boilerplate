@@ -6,18 +6,32 @@
                 <Logo class="logo-svg" />
             </NuxtLink>
 
-            <div class="menu-button" tabindex="0" @click="mobileOpen = !mobileOpen">
-                <div class="menu-open-button-graphic">
+            <div class="mobile-menu-button" tabindex="0" @click="mobileOpen = !mobileOpen">
+                <div class="mobile-menu-open-button-graphic">
                     <div class="line line1"></div>
                     <div class="line line2"></div>
                     <div class="line line3"></div>
                 </div>
-                <div class="menu-close-button-graphic">
+                <div class="mobile-menu-close-button-graphic">
                     <div class="line"></div>
                 </div>
             </div>
+            <div class="mobile-menu">
+                 <NuxtLink class="nav" :class="{ active: route.path.startsWith('/styles') }" to="/styles/" @click="mobileOpen = false">
+                    Style Guide
+                </NuxtLink>
+                <NuxtLink class="nav" :class="{ active: route.path.startsWith('/ethics') }" to="/ethics/" @click="mobileOpen = false">
+                    Ethics & Transparency 
+                </NuxtLink>
+                <NuxtLink class="nav" :class="{ active: route.path.startsWith('/community') }" to="/community/" @click="mobileOpen = false">
+                    Community
+                </NuxtLink>
+                <NuxtLink class="nav" to="#form" @click="mobileOpen = false">
+                    Stay in Touch
+                </NuxtLink>
+            </div>
 
-            <div class="core-pages">
+            <div class="desktop-menu">
                  <NuxtLink class="nav" :class="{ active: route.path.startsWith('/styles') }" to="/styles/" @click="mobileOpen = false">
                     Style Guide
                 </NuxtLink>

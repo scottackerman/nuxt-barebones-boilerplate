@@ -4,6 +4,7 @@ import svgLoader from 'vite-svg-loader'
 
 export default defineNuxtConfig({
   ssr: false,
+  plugins: ['~/plugins/gtm-pageview.client.ts'],
   nitro: {
     preset: 'static'
   },
@@ -13,8 +14,10 @@ export default defineNuxtConfig({
     plugins: [svgLoader()]
   },
   gtm: {
-    id: 'GTM-XXXXX',
-    defer: true
+    id: 'GTM-N5FZ4DC8',
+    defer: true,
+    enabled: true,
+    debug: true
   },
   css: [
     '~/assets/css/main.scss'

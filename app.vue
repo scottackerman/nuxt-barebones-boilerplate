@@ -8,8 +8,8 @@
     <Body :class="{ killscroll: killscroll }" />
     <div class="site-wrapper">
       <SiteHeader @modalOpen="killscroll = true" @modalClose="killscroll = false" ></SiteHeader>
-      <NuxtPage id="main" class="main" @setReferences="setReferences" @setFootnotes="setFootnotes" @setLegal="setLegal" />
-      <SiteFooter :legal="legal"></SiteFooter>
+      <NuxtPage id="main" class="main" />
+      <SiteFooter></SiteFooter>
     </div>
   </div>
 </template>

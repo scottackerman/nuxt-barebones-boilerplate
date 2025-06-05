@@ -1,60 +1,31 @@
 export default {
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "TODO: The name of our home page",
-  "description": "TODO: The description of our home page",
+  "@type": "AboutPage",
+  "name": "TODO: Page name",
+  "description": "TODO: Page description",
   "mainEntity": {
-    "@type": "ItemList",
+    "@type": "Organization",
+    "name": "TODO: Insmed formal name",
+    "url": "https://insmed.com/",
+    "foundingDate": "TODO: Actual date in yyyy-mm-dd format (1988-01-01)",
+    "ethicsPolicy": "https://insmed.com/documents/code-of-business-conduct-and-ethics.pdf",
+    "publishingPrinciples": "https://insmed.com/documents/code-of-business-conduct-and-ethics.pdf",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "TODO: (eg: Ethics Inquiries)",
+      "email": "TODO: (eg: ethics@insmed.com)"
+    },
 
-"itemListElement": [
-
-      // A node for each trial card on the homepage
-      {
-        "@type": "MedicalTrial",
-        "name": "TODO: Trial Name",
-        "description": "TODO: Trial description",
-        "status": "TODO: Trial Status",
-        "sponsor": {
-          "@type": "Organization",
-          "name": "TODO: Sponsor name",
-          "url": "TODO: Sponsor website"
-        },
-        "studySubject": {
-          "@type": "MedicalCondition",
-          "name": "TODO: Study Condition"
-        },
-        "studyLocation": [
-          {
-          "@type": "MedicalClinic",
-          "name": "TODO: Study location name",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "TODO: Study street location",
-            "addressLocality": "TODO: Study city",
-            "addressRegion": "TODO: Study State",
-            "postalCode": "TODO: Study zip",
-            "addressCountry": "TODO: Study country"
-            }
-          }
-        ],
-        "startDate": "TODO: 2025-05-01",
-        "endDate": "TODO: 2026-06-30",
-        "identifier": "TODO: .gov id for this trial",
-        "url": "TODO: Canonical url to our production homepage",
-        "phase": "TODO: https://schema.org/MedicalTrialPhase/Phase3", // This will be a link to schema.org, we need to make sure it's pointing to the right phase number.
-        "studyDesign": "TODO: (Randomized, Double-Blind, Placebo-Controlled, etc)",
-        "trialDesign": "TODO: (Parallel Group, Factorial Assignment, etc)",
-        "population": "TODO: (Adults aged 18-65 with condition..)",
-        "principalInvestigator": {
-          "@type": "Person",
-          "name": "TODO: (Dr. David Brous)",
-          "affiliation": {
-            "@type": "Organization",
-            "name": "TODO: (VCU Research Hospital)"
-          }
-        }
-      },
-      // ... More nodes for each trial
+    "sameAs": [
+      "https://insmed.com/",
+      "https://www.linkedin.com/company/insmed/",
+      "https://x.com/insmed",
+      "https://www.instagram.com/Insmed/"
     ]
+  },
+  "hasPart": {
+    "@type": "CreativeWork",
+    "name": "Code of Business Conduct and Ethics",
+    "url": "https://insmed.com/documents/code-of-business-conduct-and-ethics.pdf"
   }
 }

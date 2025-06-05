@@ -6,10 +6,6 @@
     </Head>
     <Body class="ethics">
       <h1>Community</h1>
-      <HomepageHero />
-      <HomepageScreen />
-      <HomepageBillboard />
-      <HomepageRequestForm />
     </Body>
   </div>
 </template>

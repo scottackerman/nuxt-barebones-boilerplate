@@ -98,7 +98,7 @@
       </section>
 
       <!-- Full-width Content Block -->
-      <section class="section hover:bg-lightblue">
+      <section class="section">
         <div class="container">
           <h4>Background changes on hover</h4>
           <p class="section__text">
@@ -106,6 +106,7 @@
             dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
             Maecenas ligula massa, varius a, semper congue, euismod non, mi.
           </p>
+          <button class="btn bg-purple white hover:bg-pink">Button Label</button>
         </div>
       </section>
 
@@ -117,25 +118,25 @@
             <div class="col-4 tablet:col-3 desktop:col-3">
               <div class="card">
                 <p>Column 1</p>
-                <button class="btn btn-text hover:border-pink" style="background-color: var(--purple); color: white;">Click Me</button>
+                <button class="btn bg-purple white hover:bg-pink">Click Me</button>
               </div>
             </div>
             <div class="col-4 tablet:col-3 desktop:col-3">
               <div class="card">
                 <p>Column 2</p>
-                <button class="btn btn-text hover:border-pink" style="background-color: var(--purple); color: white;">Click Me</button>
+                <button class="btn">Click Me</button>
               </div>
             </div>
             <div class="col-4 tablet:col-3 desktop:col-3">
               <div class="card">
                 <p>Column 3</p>
-                <button class="btn btn-text hover:border-pink" style="background-color: var(--purple); color: white;">Click Me</button>
+                <button class="btn">Click Me</button>
               </div>
             </div>
             <div class="col-4 tablet:col-3 desktop:col-3">
               <div class="card">
                 <p>Column 4</p>
-                <button class="btn btn-text hover:border-pink" style="background-color: var(--purple); color: white;">Click Me</button>
+                <button class="btn">Click Me</button>
               </div>
             </div>
           </div>

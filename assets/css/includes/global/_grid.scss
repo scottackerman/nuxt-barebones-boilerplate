@@ -1,31 +1,10 @@
 @use 'variables' as *;
-
-// Grid System - 
-
-// Mixin to generate grid columns based on breakpoints
-@mixin generate-col-classes($prefix, $count, $breakpoint: null) {
-  $escaped-prefix: if($prefix != '', "#{$prefix}\\:", '');
-  @if $breakpoint == null {
-    @for $i from 1 through $count {
-      #{'.' + $escaped-prefix}col-#{$i} {
-        grid-column: span #{$i};
-      }
-    }
-  } @else {
-    @media screen and (min-width: $breakpoint) {
-      @for $i from 1 through $count {
-        #{'.' + $escaped-prefix}col-#{$i} {
-          grid-column: span #{$i};
-        }
-      }
-    }
-  }
-}
+@use '../mixins/mixins' as *;
 
 // Build grid classes
 @include generate-col-classes('', 4);
-@include generate-col-classes('tablet', 6, $size-content-small);
-@include generate-col-classes('desktop', 12, $size-content-mid);
+@include generate-col-classes('tablet', 6, $size-content-mobile);
+@include generate-col-classes('desktop', 12, $size-content-tablet);
 
 .grid {
   // Mobile
@@ -34,13 +13,13 @@
   gap: $spacing--gap-x-md-mobile $spacing--gap-y-md-mobile;
 
   // Tablet
-  @media screen and (min-width: $size-content-small) {
+  @media screen and (min-width: $size-content-mobile) {
     grid-template-columns: repeat(6, 1fr);
     gap: $spacing--gap-x-md-tablet $spacing--gap-y-md-tablet;
   }
 
   // Desktop
-  @media screen and (min-width: $size-content-mid) {
+  @media screen and (min-width: $size-content-tablet) {
     grid-template-columns: repeat(12, 1fr);
     gap: $spacing--gap-x-md-desktop $spacing--gap-y-md-desktop;
   }
@@ -53,15 +32,27 @@
 .section {
   padding: $spacing--tb-sm-mobile $spacing--lr-sm-mobile;
 
-  @media screen and (min-width: $size-content-mid) {
+  @media screen and (min-width: $size-content-tablet) {
     padding: $spacing--tb-md-desktop $spacing--lr-md-desktop;
   }
+}
+
+.section--flush {
+  padding: 0;
 }
 
 .main-nav {
   padding: $spacing--tb-sm-mobile $spacing--lr-sm-mobile;
 
-  @media screen and (min-width: $size-content-mid) {
+  @media screen and (min-width: $size-content-tablet) {
+    padding: $spacing--tb-xsm-tablet $spacing--lr-md-tablet;
+  }
+
+  @media screen and (max-width: $size-content-desktop) and (min-width: $size-content-tablet) {
+    padding: $spacing--tb-xsm-desktop $spacing--lr-sm-desktop;
+  }
+
+  @media screen and (min-width: $size-content-desktop) {
     padding: $spacing--tb-xsm-desktop $spacing--lr-md-desktop;
   }
 }
@@ -69,27 +60,11 @@
 footer {
   padding: $spacing--tb-sm-mobile $spacing--lr-sm-mobile;
 
-  @media screen and (min-width: $size-content-mid) {
+  @media screen and (min-width: $size-content-tablet) {
+    padding: $spacing--tb-sm-tablet $spacing--lr-md-tablet;
+  }
+
+  @media screen and (min-width: $size-content-desktop) {
     padding: $spacing--tb-sm-desktop $spacing--lr-md-desktop;
   }
-}
-
-.section--tight {
-  padding: $spacing--tb-sm-mobile $spacing--lr-sm-mobile;
-
-  @media screen and (min-width: $size-content-mid) {
-    padding: $spacing--tb-sm-desktop $spacing--lr-sm-desktop;
-  }
-}
-
-.section--relaxed {
-  padding: $spacing--tb-lg-mobile $spacing--lr-lg-mobile;
-
-  @media screen and (min-width: $size-content-mid) {
-    padding: $spacing--tb-lg-desktop $spacing--lr-lg-desktop;
-  }
-}
-
-.section--flush {
-  padding: 0;
 }

@@ -1,54 +1,40 @@
 @use 'variables' as *;
-
-// Insemd.com project in P10 Adobe Fonts
-@import url("https://use.typekit.net/yoo1eqa.css");
-
-$font-heading: 'Kazimir', serif;
-$font-body: 'Sofia Pro', sans-serif;
-
-@mixin text-style($font, $size, $line-height, $weight: normal, $transform: none, $letter-spacing: normal) {
-  font-family: $font;
-  font-size: $size;
-  line-height: $line-height;
-  font-weight: $weight;
-  text-transform: $transform;
-  letter-spacing: $letter-spacing;
-}
+@use '../mixins/mixins' as *;
 
 // I put semantic tags + corresponding class names
 // in case of need for styling non-h tag text
 
 h1, .h1 {
   @include text-style($font-heading, 64px, 115%);
-  @media (max-width: $size-content-small) {
+  @media (max-width: $size-content-mobile) {
     @include text-style($font-heading, 48px, 115%);
   }
 }
 
 h2, .h2 {
   @include text-style($font-heading, 48px, 130%);
-  @media (max-width: $size-content-small) {
+  @media (max-width: $size-content-mobile) {
     @include text-style($font-heading, 36px, 130%);
   }
 }
 
 h3, .h3 {
   @include text-style($font-heading, 24px, 135%);
-  @media (max-width: $size-content-small) {
+  @media (max-width: $size-content-mobile) {
     @include text-style($font-heading, 22px, 140%);
   }
 }
 
 h4, .h4 {
   @include text-style($font-heading, 22px, 135%);
-  @media (max-width: $size-content-small) {
+  @media (max-width: $size-content-mobile) {
     @include text-style($font-heading, 20px, 140%);
   }
 }
 
 blockquote, .quote {
   @include text-style($font-body, 48px, 140%);
-  @media (max-width: $size-content-small) {
+  @media (max-width: $size-content-mobile) {
     @include text-style($font-body, 30px, 140%);
   }
 }
@@ -59,14 +45,14 @@ blockquote, .quote {
 
 p, .body-regular {
   @include text-style($font-body, 18px, 155%);
-  @media (max-width: $size-content-small) {
+  @media (max-width: $size-content-mobile) {
     @include text-style($font-body, 16px, 150%);
   }
 }
 
 .body-large {
   @include text-style($font-body, 24px, 145%);
-  @media (max-width: $size-content-small) {
+  @media (max-width: $size-content-mobile) {
     @include text-style($font-body, 22px, 135%);
   }
 }
@@ -84,14 +70,23 @@ p, .body-regular {
 }
 
 .nav {
-  @include text-style($font-body, 20px, auto, 700);
+  @include text-style($font-body, 20px, auto, 900);
+  color: var(--purple);
   text-decoration: none;
   &.active {
     text-decoration: underline;
-    text-underline-offset: 6px;
+    text-underline-offset: 10px;
   }
-}
-
-.btn-text {
-  @include text-style($font-body, 16px, 24px, 700);
+  @media (max-width: $size-content-desktop) {
+    @include text-style($font-body, 18px, auto, 900);
+    &.active {
+      text-underline-offset: 8px;
+    }
+  }
+  @media (max-width: $size-content-mobile) {
+    @include text-style($font-body, 14px, auto, 900);
+     &.active {
+      text-underline-offset: 6px;
+    }
+  }
 }

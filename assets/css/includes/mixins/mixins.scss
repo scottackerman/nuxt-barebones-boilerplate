@@ -1,0 +1,28 @@
+@mixin text-style($font, $size, $line-height, $weight: normal, $transform: none, $letter-spacing: normal) {
+  font-family: $font;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $weight;
+  text-transform: $transform;
+  letter-spacing: $letter-spacing;
+}
+
+// Mixin to generate grid columns based on breakpoints
+@mixin generate-col-classes($prefix, $count, $breakpoint: null) {
+  $escaped-prefix: if($prefix != '', "#{$prefix}\\:", '');
+  @if $breakpoint == null {
+    @for $i from 1 through $count {
+      #{'.' + $escaped-prefix}col-#{$i} {
+        grid-column: span #{$i};
+      }
+    }
+  } @else {
+    @media screen and (min-width: $breakpoint) {
+      @for $i from 1 through $count {
+        #{'.' + $escaped-prefix}col-#{$i} {
+          grid-column: span #{$i};
+        }
+      }
+    }
+  }
+}

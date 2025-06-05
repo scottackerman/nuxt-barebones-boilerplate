@@ -22,10 +22,10 @@ export async function useStructuredData() {
             ],
             __dangerouslyDisableSanitizers: ['script']
         }))
-    console.log('[StructuredData]', routeName, schema)
+        // console.log('[StructuredData]', routeName, schema)
     } catch (e) {
-        console.log(`[StructuredData] No schema found for route: ${route.path}`)
+        // console.log(`[StructuredData] No schema found for route: ${route.path}`)
     }
-    console.log('[StructuredData] route.path:', route.path)
-    console.log('[StructuredData] routeName:', routeName)
+    // console.log('[StructuredData] route.path:', route.path)
+    // console.log('[StructuredData] routeName:', routeName)
 }

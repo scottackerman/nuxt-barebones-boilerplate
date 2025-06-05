@@ -5,9 +5,7 @@ export default {
   "description": "TODO: The description of our home page",
   "mainEntity": {
     "@type": "ItemList",
-
-"itemListElement": [
-
+    "itemListElement": [
       // A node for each trial card on the homepage
       {
         "@type": "MedicalTrial",
@@ -53,8 +51,8 @@ export default {
             "name": "TODO: (VCU Research Hospital)"
           }
         }
-      },
-      // ... More nodes for each trial
+      }
+      // ... More nodes for each trial, DON'T FORGET COMMA ^
     ]
   }
 }

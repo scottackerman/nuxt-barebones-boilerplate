@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -80,4 +82,49 @@ sub {
   /* Move the subscripted text down, but only
      half as far down as the superscript moved up */
   bottom: -0.25em;
+}
+
+*, * * {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 86px;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.killscroll {
+  overflow: hidden;
+}
+
+#skip a {
+  display: block;
+  position: absolute;
+  left: -999px;
+  top: -999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+
+  &:focus {
+    left: auto;
+    top: auto;
+    width: 30%;
+    height: auto;
+    overflow: auto;
+    margin: 10px 35%;
+    color: var(--black);
+    background-color: var(--white);
+    padding: 5px;
+    border-radius: 15px;
+    border: 4px solid var(--black);
+    text-align: center;
+    font-size: 1.2em;
+    z-index: 999;
+  }
 }

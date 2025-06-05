@@ -1,84 +1,15 @@
 @use 'variables' as *;
-
-.btn-group {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-@media screen and (min-width: $size-content-small) {
-  .btn-group {
-    flex-direction: row;
-  }
-}
+@use '../mixins/mixins' as *;
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--plum) 0% 0% no-repeat padding-box;
-  border: 2px solid transparent;
   text-align: center;
-  // font: normal normal bold 17px/22px "Aktiv Grotesk", sans-serif;
-  // letter-spacing: 0;
-  width: 100%;
-  // height: 66px;
-  padding: 16px 24px;
-  text-decoration: none;
-  margin: 0;
+  padding: $spacing-tb-button $spacing-lr-button;
+  border: none;
   border-radius: $border-radius--med;
-
-  &.plum-btn {
-    background: var(--plum) 0% 0% no-repeat padding-box;
-    color: var(--white);
-
-    &:hover,
-    &:focus {
-      background: var(--white) 0% 0% no-repeat padding-box;
-      border-color: var(--plum);
-      color: var(--plum);
-    }
-  }
-
-  &.blue-btn {
-    background: var(--teal) 0% 0% no-repeat padding-box;
-    color: var(--white);
-
-    &:hover,
-    &:focus {
-      background: var(--white) 0% 0% no-repeat padding-box;
-      border-color: var(--teal);
-      color: var(--teal);
-    }
-  }
-
-  &.blue-ko-btn {
-    background: var(--white) 0% 0% no-repeat padding-box;
-    border: 2px solid var(--teal);
-    color: var(--teal);
-    text-align: center;
-
-    &:hover,
-    &:focus {
-      background: var(--teal) 0% 0% no-repeat padding-box;
-      border-color: transparent;
-      color: var(--white);
-    }
-  }
-
-  &.white-btn {
-    background: var(--white) 0% 0% no-repeat padding-box;
-    border: 2px solid transparent;
-    color: var(--teal);
-
-    &:hover,
-    &:focus {
-      background: var(--teal) 0% 0% no-repeat padding-box;
-      border-color: var(--white);
-      color: var(--white);
-    }
-  }
+  @include text-style($font-body, 16px, 24px, 400);
+  transition: background-color 0.25s linear;
+  cursor: pointer;
 }
-

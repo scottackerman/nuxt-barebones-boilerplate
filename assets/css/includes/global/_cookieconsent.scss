@@ -82,7 +82,7 @@
   background-color: var(--purple);
 }
 
-@media screen and (max-width: $size-content-small) {
+@media screen and (max-width: $size-content-mobile) {
   #cookie-consent-banner h3 {
     font-size: 20px;
     line-height: 25px;
