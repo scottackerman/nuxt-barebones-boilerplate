@@ -6,11 +6,13 @@
 $font-heading: 'Kazimir', serif;
 $font-body: 'Sofia Pro', sans-serif;
 
-@mixin text-style($family, $size, $line, $weight: normal) {
-  font-family: $family;
+@mixin text-style($font, $size, $line-height, $weight: normal, $transform: none, $letter-spacing: normal) {
+  font-family: $font;
   font-size: $size;
-  line-height: $line;
+  line-height: $line-height;
   font-weight: $weight;
+  text-transform: $transform;
+  letter-spacing: $letter-spacing;
 }
 
 // I put semantic tags + corresponding class names
@@ -45,9 +47,9 @@ h4, .h4 {
 }
 
 blockquote, .quote {
-  @include text-style($font-body, 48px, 140%, bold);
+  @include text-style($font-body, 48px, 140%);
   @media (max-width: $size-content-small) {
-    @include text-style($font-body, 30px, 140%, bold);
+    @include text-style($font-body, 30px, 140%);
   }
 }
 
@@ -70,13 +72,26 @@ p, .body-regular {
 }
 
 .eyebrow-small {
-  @include text-style($font-body, 14px, 115%, bold);
+  @include text-style($font-body, 14px, 115%, bold, uppercase, 2px);
 }
 
 .eyebrow-medium {
-  @include text-style($font-body, 16px, 150%);
+  @include text-style($font-body, 16px, 150%, bold, uppercase, 2px);
 }
 
 .eyebrow-large {
-  @include text-style($font-body, 24px, 120%);
+  @include text-style($font-body, 24px, 120%, bold, uppercase, 2px);
+}
+
+.nav {
+  @include text-style($font-body, 20px, auto, 700);
+  text-decoration: none;
+  &.active {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+  }
+}
+
+.btn-text {
+  @include text-style($font-body, 16px, 24px, 700);
 }

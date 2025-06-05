@@ -9,22 +9,6 @@
     justify-content: center;
     z-index: 10;
 
-    .site-header-pattern-picture {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    .oc-auto-fit-logo-picture {
-      position: absolute;
-      top: 52px;
-      left: 37px;
-    }
-
-    .menu-button {
-      display: none;
-    }
-
     .main-nav {
       display: flex;
       flex-direction: row;
@@ -37,25 +21,14 @@
       opacity: 1;
       margin: 0 auto;
       z-index: 2;
-      padding: 40px;
 
       .core-pages {
         display: flex;
         flex-direction: row;
         justify-content: right;
-        align-items: center;
+        align-items: end;
         width: 100%;
         gap: 40px;
-
-        > .fake-link,
-        > a {
-          position: relative;
-          text-align: left;
-          font: normal normal 500 17px/22px "Aktiv Grotesk", Arial, sans-serif;
-          letter-spacing: 0;
-          color: var(--darkpurple);
-          text-decoration: none;
-        }
       }
     }
   }
@@ -150,16 +123,8 @@
       }
     }
 
-    .core-pages,
-    .btn-use-oc-auto-fit,
-    .site-header-pattern-picture {
+    .core-pages {
       display: none;
-    }
-
-    .oc-auto-fit-logo-picture {
-      position: absolute;
-      top: 15px;
-      left: 15px;
     }
 
     &.active {
@@ -186,29 +151,6 @@
         padding: 130px 15px 15px;
         display: flex;
         flex-direction: column;
-      }
-
-      .sub-label {
-        text-align: left;
-        font: normal normal 400 18px/22px "Aktiv Grotesk", Arial, sans-serif;
-        letter-spacing: 0;
-        color: var(--black60);
-      }
-
-      .btn-use-oc-auto-fit {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 15px;
-        width: calc(100% - 30px);
-        height: 48px;
-        background-color: var(--blue);
-        border-radius: 6px;
-        text-align: center;
-        font: normal normal bold 17px/22px "Aktiv Grotesk", Arial, sans-serif;
-        letter-spacing: 0;
-        color: var(--white);
-        text-decoration: none;
       }
     }
   }

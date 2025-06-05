@@ -5,7 +5,7 @@
       <Meta property="og:url" :content="`https://www.domain.com${route.path}`" />
     </Head>
     <Body class="ethics">
-      <h1>Ethics & Transparency</h1>
+      <h1>Community</h1>
       <HomepageHero />
       <HomepageScreen />
       <HomepageBillboard />
@@ -21,7 +21,7 @@
 
   const route = useRoute()
 
-  const title = "Ethics"
+  const title = "Community"
   const description = "Page Description"
 
   useSeoMeta({

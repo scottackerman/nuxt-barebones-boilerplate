@@ -1,16 +1,14 @@
 <template>
     <footer>
-        <div>
-            <div class="footer-top">
-                <NuxtLink to="/" class="logo-link" @click="mobileOpen = false">
-                    <Logo class="logo-svg" />
-                </NuxtLink>
-            </div>
-            
-            <p class="body-small">
-                This site is intended for US residents only.<br>Copyright © 2025 Insmed, Inc. All rights reserved.<br>MED-ALL-NA-00022 July 2025
-            </p>
+        <div class="footer-top">
+            <NuxtLink to="/" class="logo-link" @click="mobileOpen = false">
+                <Logo class="logo-svg" />
+            </NuxtLink>
         </div>
+        
+        <p class="body-small">
+            This site is intended for US residents only.<br>Copyright © 2025 Insmed, Inc. All rights reserved.<br>MED-ALL-NA-00022 July 2025
+        </p>
     </footer>
 </template>
 

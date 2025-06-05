@@ -20,14 +20,15 @@
   justify-content: center;
   background: var(--plum) 0% 0% no-repeat padding-box;
   border: 2px solid transparent;
-  border-radius: 6px;
   text-align: center;
-  font: normal normal bold 17px/22px "Aktiv Grotesk", sans-serif;
-  letter-spacing: 0;
+  // font: normal normal bold 17px/22px "Aktiv Grotesk", sans-serif;
+  // letter-spacing: 0;
   width: 100%;
-  height: 66px;
+  // height: 66px;
+  padding: 16px 24px;
   text-decoration: none;
   margin: 0;
+  border-radius: $border-radius--med;
 
   &.plum-btn {
     background: var(--plum) 0% 0% no-repeat padding-box;

@@ -31,7 +31,7 @@ if (localStorage.getItem('consentMode') === null) {
 window.onload = function() {
   const cookie_consent_banner_dom = `
     <div id="cookie-consent-banner" class="cookie-consent-banner">
-        <h3>This website uses cookies</h3>
+        <h3 class="h3">This website uses cookies</h3>
         <p>We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services.</p>
         <div class="cookie-consent-options">
           <label><input id="consent-necessary" type="checkbox" value="Necessary" checked disabled>Necessary</label>

@@ -1,8 +1,8 @@
 <template>
-    <header class="site-nav" :class="mobileOpen ? 'active' : ''" @mouseleave="subnav = false">
+    <header class="site-nav" :class="mobileOpen ? 'active' : ''">
         <Picture name="site-header-pattern" svg />
         <nav class="main-nav" aria-label="main-navigation">
-            <NuxtLink to="/" @mouseover="subnav = false" @focus="subnav = false" @click="mobileOpen = false">
+            <NuxtLink to="/" @click="mobileOpen = false">
                 <Logo class="logo-svg" />
             </NuxtLink>
 
@@ -18,13 +18,16 @@
             </div>
 
             <div class="core-pages">
-                <NuxtLink to="/ethics/" @mouseover="subnav = false" @focus="subnav = false" @click="mobileOpen = false">
+                 <NuxtLink class="nav" :class="{ active: route.path.startsWith('/styles') }" to="/styles/" @click="mobileOpen = false">
+                    Style Guide
+                </NuxtLink>
+                <NuxtLink class="nav" :class="{ active: route.path.startsWith('/ethics') }" to="/ethics/" @click="mobileOpen = false">
                     Ethics & Transparency 
                 </NuxtLink>
-                <NuxtLink to="/community/" @mouseover="subnav = false" @click="mobileOpen = false">
+                <NuxtLink class="nav" :class="{ active: route.path.startsWith('/community') }" to="/community/" @click="mobileOpen = false">
                     Community
                 </NuxtLink>
-                <NuxtLink to="/form/" @mouseover="subnav = false" @click="mobileOpen = false">
+                <NuxtLink class="nav" to="#form" @click="mobileOpen = false">
                     Stay in Touch
                 </NuxtLink>
             </div>
@@ -35,7 +38,6 @@
 <script setup lang="ts">
     import Logo from '~/assets/images/logo-svg.svg'
     const mobileOpen = ref(false)
-    const subnav = ref(false)
     const emit = defineEmits(['modal-open', 'modal-close'])
     const route = useRoute()
     const stub = computed(() => {

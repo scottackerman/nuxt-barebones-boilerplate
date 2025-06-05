@@ -8,7 +8,8 @@ $spacing--tb-sm-mobile: 12px;
 $spacing--tb-md-mobile: 20px;
 $spacing--tb-lg-mobile: 32px;
 
-$spacing--tb-sm-desktop: 24px;
+$spacing--tb-xsm-desktop: 32px;
+$spacing--tb-sm-desktop: 62px;
 $spacing--tb-md-desktop: 100px;
 $spacing--tb-lg-desktop: 140px;
 
@@ -36,19 +37,71 @@ $spacing--gap-y-sm-desktop: 16px;
 $spacing--gap-y-md-desktop: 24px;
 $spacing--gap-y-lg-desktop: 40px;
 
-// -- vars for JS access
+$border-radius--sm: 4px;
+$border-radius--med: 8px;
+$border-radius--lg: 16px;
+
+$colors: (
+  "white": #FFFFFF,
+  "black": #000000,
+  "blackalpha": #00000029,
+  "lightgray": #E0E0E0,
+  "quartzgray": #534B53,
+  "pink": #CB00A1,
+  "plum": #93328E,
+  "lightblue": #62B5E5,
+  "teal": #00B0B9,
+  "green": #009681,
+  "blue": #0047BB,
+  "purple": #440099,
+  "darkpurple": #26005A
+);
+
+// Generate class names for each color (--white, etc)
 :root {
-  --white: #FFFFFF;
-  --black: #000000;
-  --blackalpha: #00000029;
-  --lightgray: #E0E0E0;
-  --quartzgray: #534B53;
-  --pink: #CB00A1;
-  --plum: #93328E;
-  --lightblue: #62B5E5;
-  --teal: #00B0B9;
-  --green: #009681;
-  --blue: #0047BB;
-  --purple: #440099;
-  --darkpurple: #26005A;
+  @each $name, $value in $colors {
+    --#{$name}: #{$value};
+  }
+}
+
+// Generate classes for text colors (.white, etc)
+@each $name, $value in $colors {
+  .#{$name} {
+    color: var(--#{$name});
+  }
+}
+
+// Generate classes for bg colors (.bg-white, etc)
+@each $name, $value in $colors {
+  .bg-#{$name} {
+    background-color: var(--#{$name});
+  }
+}
+
+// Generate classes for border colors (.border-purple, etc)
+@each $name, $value in $colors {
+  .border-#{$name} {
+    border-color: var(--#{$name});
+  }
+}
+
+// Generate classes for hover background colors (hover:bg-blue, etc)
+@each $name, $value in $colors {
+  .hover\:bg-#{$name}:hover {
+    background-color: var(--#{$name});
+  }
+}
+
+// Generate classes for hover text colors (hover:blue, etc)
+@each $name, $value in $colors {
+  .hover\:#{$name}:hover {
+    color: var(--#{$name});
+  }
+}
+
+// Generate classes for hover border colors (hover:border-blue, etc)
+@each $name, $value in $colors {
+  .hover\:border-#{$name}:hover {
+    border-color: var(--#{$name});
+  }
 }

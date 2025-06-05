@@ -33,6 +33,22 @@
   }
 }
 
+.main-nav {
+  padding: $spacing--tb-sm-mobile $spacing--lr-sm-mobile;
+
+  @media screen and (min-width: $size-content-mid) {
+    padding: $spacing--tb-xsm-desktop $spacing--lr-md-desktop;
+  }
+}
+
+footer {
+  padding: $spacing--tb-sm-mobile $spacing--lr-sm-mobile;
+
+  @media screen and (min-width: $size-content-mid) {
+    padding: $spacing--tb-sm-desktop $spacing--lr-md-desktop;
+  }
+}
+
 .section--tight {
   padding: $spacing--tb-sm-mobile $spacing--lr-sm-mobile;
 
