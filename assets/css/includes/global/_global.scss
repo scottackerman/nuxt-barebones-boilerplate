@@ -1,44 +1,46 @@
+@use 'variables' as *;
+
 *, * * {
   box-sizing: border-box;
 }
 
 html {
-	scroll-padding-top: 86px;
+  scroll-padding-top: 86px;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-	html {
-		scroll-behavior: auto;
-	}
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
-	color: var(--bodycopy);
-	overflow-x: hidden;
+  color: var(--black);
+  overflow-x: hidden;
   box-sizing: border-box;
 }
 
 .killscroll {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .site-wrapper {
-	max-width: var(--site-width);
-	margin: 0 auto;
-	position: relative;
-	display: block;
-	background-color: #fff;
+  max-width: var(--site-width);
+  margin: 0 auto;
+  position: relative;
+  display: block;
+  background-color: var(--white);
 }
 
 section {
   position: relative;
-	max-width: var(--site-width);
-	margin: 0 auto;
+  max-width: var(--site-width);
+  margin: 0 auto;
 }
 
 .content-container {
-	max-width: var(--content-width);
-	margin: 0 auto;
+  max-width: var(--site-width);
+  margin: 0 auto;
   padding: 0 30px;
 }
 
@@ -58,11 +60,11 @@ section {
     height: auto;
     overflow: auto;
     margin: 10px 35%;
-    color: #000;
-    background-color: #fff;
+    color: var(--black);
+    background-color: var(--white);
     padding: 5px;
     border-radius: 15px;
-    border: 4px solid #000;
+    border: 4px solid var(--black);
     text-align: center;
     font-size: 1.2em;
     z-index: 999;

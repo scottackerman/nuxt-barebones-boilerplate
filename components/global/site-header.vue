@@ -19,13 +19,13 @@
 
             <div class="core-pages">
                 <NuxtLink to="/ethics/" @mouseover="subnav = false" @focus="subnav = false" @click="mobileOpen = false">
-                    Link 1 
+                    Ethics & Transparency 
                 </NuxtLink>
                 <NuxtLink to="/community/" @mouseover="subnav = false" @click="mobileOpen = false">
-                    Link 2
+                    Community
                 </NuxtLink>
                 <NuxtLink to="/form/" @mouseover="subnav = false" @click="mobileOpen = false">
-                    Link 3
+                    Stay in Touch
                 </NuxtLink>
             </div>
         </nav>
@@ -37,13 +37,13 @@
     const mobileOpen = ref(false)
     const subnav = ref(false)
     const emit = defineEmits(['modal-open', 'modal-close'])
-    const { currentRoute } = useRouter()
+    const route = useRoute()
     const stub = computed(() => {
-        return currentRoute.value.name.substring(0,15)
+        return String(route.name).substring(0, 15)
     })
 
     watch(mobileOpen, modalEmit)
-    function modalEmit (newVal) {
+    function modalEmit (newVal: boolean) {
         if (newVal) {
         emit('modal-open')
         } else {

@@ -1,0 +1,54 @@
+@use 'variables' as *;
+
+// ---------------------------------------------
+// Grid System
+// ---------------------------------------------
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: $spacing--gap-x-md-mobile $spacing--gap-y-md-mobile;
+
+  @media screen and (min-width: $size-content-mid) {
+    gap: $spacing--gap-x-md-desktop $spacing--gap-y-md-desktop;
+  }
+}
+
+// Column span utilities
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    grid-column: span #{$i};
+  }
+}
+
+// ---------------------------------------------
+// Section Spacing Utilities
+// ---------------------------------------------
+
+.section {
+  padding: $spacing--tb-sm-mobile $spacing--lr-sm-mobile;
+
+  @media screen and (min-width: $size-content-mid) {
+    padding: $spacing--tb-md-desktop $spacing--lr-md-desktop;
+  }
+}
+
+.section--tight {
+  padding: $spacing--tb-sm-mobile $spacing--lr-sm-mobile;
+
+  @media screen and (min-width: $size-content-mid) {
+    padding: $spacing--tb-sm-desktop $spacing--lr-sm-desktop;
+  }
+}
+
+.section--relaxed {
+  padding: $spacing--tb-lg-mobile $spacing--lr-lg-mobile;
+
+  @media screen and (min-width: $size-content-mid) {
+    padding: $spacing--tb-lg-desktop $spacing--lr-lg-desktop;
+  }
+}
+
+.section--flush {
+  padding: 0;
+}

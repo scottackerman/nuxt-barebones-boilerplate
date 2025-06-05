@@ -2,17 +2,13 @@
     <footer>
         <div>
             <div class="footer-top">
-                <NuxtLink to="/" class="logo-link" @mouseover="subnav = false" @focus="subnav = false" @click="mobileOpen = false">
+                <NuxtLink to="/" class="logo-link" @click="mobileOpen = false">
                     <Logo class="logo-svg" />
                 </NuxtLink>
-
-                <div v-if="legal.length" class="image-disclaimer">
-                    <p v-for="l in legal" v-html="l"></p>
-                </div>
             </div>
             
-            <p class="address">
-                Address
+            <p class="body-small">
+                This site is intended for US residents only.<br>Copyright © 2025 Insmed, Inc. All rights reserved.<br>MED-ALL-NA-00022 July 2025
             </p>
         </div>
     </footer>
@@ -20,11 +16,19 @@
 
 
 <script setup lang="ts">
+    declare global {
+        interface Window {
+            cookieconsent: {
+                show: () => void
+            }
+        }
+    }
     import Logo from '~/assets/images/logo-svg.svg'
+    const mobileOpen = ref(false)
     function openCookies() {
-        try {
+        if (window.cookieconsent?.show) {
             window.cookieconsent.show()
-        } catch (_) {}
+        }
     }
 
     const props = defineProps({

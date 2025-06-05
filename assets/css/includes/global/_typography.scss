@@ -1,0 +1,82 @@
+@use 'variables' as *;
+
+// Insemd.com project in P10 Adobe Fonts
+@import url("https://use.typekit.net/yoo1eqa.css");
+
+$font-heading: 'Kazimir', serif;
+$font-body: 'Sofia Pro', sans-serif;
+
+@mixin text-style($family, $size, $line, $weight: normal) {
+  font-family: $family;
+  font-size: $size;
+  line-height: $line;
+  font-weight: $weight;
+}
+
+// I put semantic tags + corresponding class names
+// in case of need for styling non-h tag text
+
+h1, .h1 {
+  @include text-style($font-heading, 64px, 115%);
+  @media (max-width: $size-content-small) {
+    @include text-style($font-heading, 48px, 115%);
+  }
+}
+
+h2, .h2 {
+  @include text-style($font-heading, 48px, 130%);
+  @media (max-width: $size-content-small) {
+    @include text-style($font-heading, 36px, 130%);
+  }
+}
+
+h3, .h3 {
+  @include text-style($font-heading, 24px, 135%);
+  @media (max-width: $size-content-small) {
+    @include text-style($font-heading, 22px, 140%);
+  }
+}
+
+h4, .h4 {
+  @include text-style($font-heading, 22px, 135%);
+  @media (max-width: $size-content-small) {
+    @include text-style($font-heading, 20px, 140%);
+  }
+}
+
+blockquote, .quote {
+  @include text-style($font-body, 48px, 140%, bold);
+  @media (max-width: $size-content-small) {
+    @include text-style($font-body, 30px, 140%, bold);
+  }
+}
+
+.body-small {
+  @include text-style($font-body, 14px, 150%);
+}
+
+p, .body-regular {
+  @include text-style($font-body, 18px, 155%);
+  @media (max-width: $size-content-small) {
+    @include text-style($font-body, 16px, 150%);
+  }
+}
+
+.body-large {
+  @include text-style($font-body, 24px, 145%);
+  @media (max-width: $size-content-small) {
+    @include text-style($font-body, 22px, 135%);
+  }
+}
+
+.eyebrow-small {
+  @include text-style($font-body, 14px, 115%, bold);
+}
+
+.eyebrow-medium {
+  @include text-style($font-body, 16px, 150%);
+}
+
+.eyebrow-large {
+  @include text-style($font-body, 24px, 120%);
+}

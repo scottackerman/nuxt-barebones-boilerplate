@@ -9,8 +9,6 @@
     <div class="site-wrapper">
       <SiteHeader @modalOpen="killscroll = true" @modalClose="killscroll = false" ></SiteHeader>
       <NuxtPage id="main" class="main" @setReferences="setReferences" @setFootnotes="setFootnotes" @setLegal="setLegal" />
-      <Footnote :footnotes="footnotes"></Footnote>
-      <References :references="references"></References>
       <SiteFooter :legal="legal"></SiteFooter>
     </div>
   </div>
@@ -18,19 +16,6 @@
 
 <script setup>
   const killscroll = ref(false)
-
-  const references = ref([])
-  const setReferences = (r) => {
-    references.value = r
-  }
-  const footnotes = ref([])
-  const setFootnotes = (f) => {
-    footnotes.value = f
-  }
-  const legal = ref([])
-  const setLegal = (l) => {
-    legal.value = l
-  }
 
   useHead({
     htmlAttrs: {

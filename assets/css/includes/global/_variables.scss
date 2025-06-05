@@ -1,22 +1,54 @@
+// $ vars for media queries and preprocessor logic
+$site-width-max: 1600px;
+$size-content-wide: 1080px;
+$size-content-mid: 780px;
+$size-content-small: 565px;
+
+$spacing--tb-sm-mobile: 12px;
+$spacing--tb-md-mobile: 20px;
+$spacing--tb-lg-mobile: 32px;
+
+$spacing--tb-sm-desktop: 24px;
+$spacing--tb-md-desktop: 100px;
+$spacing--tb-lg-desktop: 140px;
+
+$spacing--lr-sm-mobile: 8px;
+$spacing--lr-md-mobile: 16px;
+$spacing--lr-lg-mobile: 24px;
+
+$spacing--lr-sm-desktop: 20px;
+$spacing--lr-md-desktop: 112px;
+$spacing--lr-lg-desktop: 156px;
+
+$spacing--gap-x-sm-mobile: 8px;
+$spacing--gap-x-md-mobile: 12px;
+$spacing--gap-x-lg-mobile: 20px;
+
+$spacing--gap-x-sm-desktop: 16px;
+$spacing--gap-x-md-desktop: 24px;
+$spacing--gap-x-lg-desktop: 40px;
+
+$spacing--gap-y-sm-mobile: 8px;
+$spacing--gap-y-md-mobile: 16px;
+$spacing--gap-y-lg-mobile: 24px;
+
+$spacing--gap-y-sm-desktop: 16px;
+$spacing--gap-y-md-desktop: 24px;
+$spacing--gap-y-lg-desktop: 40px;
+
+// -- vars for JS access
 :root {
-  --white: rgb(255 255 255 / 100%); // #FFFFFF
-  --white10: rgb(255 255 255 / 10%); // #FFFFFF1A
-  --black: rgb(0 0 0 / 100%); // #000000
-  --black29: rgb(0 0 0 / 29%); // #00000029
-  --black60: rgb(0 0 0 / 60%); // #00000060
-  --black88: rgb(0 0 0 / 88%); // #00000088
-  --trow-ltblue: rgb(190 229 235 / 19%); // #BEE5EB 19%
-  --veryltblue: rgb(190 229 235 / 100%); // #BEE5EB 100%
-  --ltblue: rgb(3 186 198 / 100%); // #03BAC6
-  --mdblue: rgb(0 111 155 / 100%); // #006F9B
-  --dkblue: rgb(26 27 65 / 100%); // #1A1B41
-  --mauve: rgb(201 123 132 / 100%); // #C97B84
-  --ltmauve: rgb(241 220 222 / 100%); // #F1DCDE
-  --ltmauve60: rgb(241 220 222 / 60%); // #F1DCDE
-  --dkmauve: rgb(177 75 86 / 100%); // #B14B56
-  --brandpurple: #409;
-  --teal: #00BAC6;
-  --bodycopy: var(--dkblue);
-  --site-width: 1440px;
-  --content-width: 1080px;
+  --white: #FFFFFF;
+  --black: #000000;
+  --blackalpha: #00000029;
+  --lightgray: #E0E0E0;
+  --quartzgray: #534B53;
+  --pink: #CB00A1;
+  --plum: #93328E;
+  --lightblue: #62B5E5;
+  --teal: #00B0B9;
+  --green: #009681;
+  --blue: #0047BB;
+  --purple: #440099;
+  --darkpurple: #26005A;
 }
