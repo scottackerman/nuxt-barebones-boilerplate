@@ -1,23 +1,48 @@
 @use 'variables' as *;
 
-// ---------------------------------------------
-// Grid System
-// ---------------------------------------------
+// Grid System - 
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: $spacing--gap-x-md-mobile $spacing--gap-y-md-mobile;
-
-  @media screen and (min-width: $size-content-mid) {
-    gap: $spacing--gap-x-md-desktop $spacing--gap-y-md-desktop;
+// Mixin to generate grid columns based on breakpoints
+@mixin generate-col-classes($prefix, $count, $breakpoint: null) {
+  $escaped-prefix: if($prefix != '', "#{$prefix}\\:", '');
+  @if $breakpoint == null {
+    @for $i from 1 through $count {
+      #{'.' + $escaped-prefix}col-#{$i} {
+        grid-column: span #{$i};
+      }
+    }
+  } @else {
+    @media screen and (min-width: $breakpoint) {
+      @for $i from 1 through $count {
+        #{'.' + $escaped-prefix}col-#{$i} {
+          grid-column: span #{$i};
+        }
+      }
+    }
   }
 }
 
-// Column span utilities
-@for $i from 1 through 12 {
-  .col-#{$i} {
-    grid-column: span #{$i};
+// Build grid classes
+@include generate-col-classes('', 4);
+@include generate-col-classes('tablet', 6, $size-content-small);
+@include generate-col-classes('desktop', 12, $size-content-mid);
+
+.grid {
+  // Mobile
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $spacing--gap-x-md-mobile $spacing--gap-y-md-mobile;
+
+  // Tablet
+  @media screen and (min-width: $size-content-small) {
+    grid-template-columns: repeat(6, 1fr);
+    gap: $spacing--gap-x-md-tablet $spacing--gap-y-md-tablet;
+  }
+
+  // Desktop
+  @media screen and (min-width: $size-content-mid) {
+    grid-template-columns: repeat(12, 1fr);
+    gap: $spacing--gap-x-md-desktop $spacing--gap-y-md-desktop;
   }
 }
 

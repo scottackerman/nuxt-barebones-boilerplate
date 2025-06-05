@@ -1,4 +1,4 @@
-# Nuxt Boilerplate
+# Nuxt boilerplate
 
 * `npm run dev` makes it go..
 
